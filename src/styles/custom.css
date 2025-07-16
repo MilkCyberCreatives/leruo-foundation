@@ -1,0 +1,22 @@
+/* src/styles/custom.css */
+
+.bg-leruo {
+  background-color: #48101f;
+}
+
+.text-leruo {
+  color: #48101f;
+}
+
+.hover\:text-leruo:hover {
+  color: #48101f;
+}
+
+/* Hide scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
