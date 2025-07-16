@@ -39,5 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+<<<<<<< HEAD
 
 public/videos/hero.mp4
+=======
+>>>>>>> 7e1e9c6 (Initial commit)
