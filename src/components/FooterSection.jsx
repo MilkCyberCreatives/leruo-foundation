@@ -17,8 +17,8 @@ export default function FooterSection() {
           <div className="space-y-2">
             <p className="text-sm hover:text-white/90 transition-colors">1103 Tugela Street, Klipfontein View,</p>
             <p className="text-sm hover:text-white/90 transition-colors">Ext 1, Midrand, 1685</p>
-            <p className="text-sm hover:text-white/90 transition-colors">connect@leruofoundation.org</p>
-            <p className="text-lg mt-3 hover:text-white/90 transition-colors">+27 77 605 2454</p>
+            <a href="mailto:connect@leruofoundation.org" className="text-sm hover:text-white/90 transition-colors block">connect@leruofoundation.org</a>
+            <a href="tel:+27776052454" className="text-lg mt-3 hover:text-white/90 transition-colors block">+27 77 605 2454</a>
           </div>
         </div>
 
@@ -26,13 +26,11 @@ export default function FooterSection() {
         <div className="space-y-4">
           <h4 className="text-xl font-semibold mb-4 border-b border-white/20 pb-2 inline-block">Navigation</h4>
           <ul className="space-y-3">
-            {['Home', 'About Us', 'Our Programs', 'Events', 'Contact'].map((item) => (
-              <li key={item}>
-                <a href="#" className="text-sm hover:text-white/90 hover:underline transition-all">
-                  {item}
-                </a>
-              </li>
-            ))}
+            <li><a href="/" className="text-sm hover:text-white/90 hover:underline transition-all">Home</a></li>
+            <li><a href="/about" className="text-sm hover:text-white/90 hover:underline transition-all">About Us</a></li>
+            <li><a href="/programs" className="text-sm hover:text-white/90 hover:underline transition-all">Our Programs</a></li>
+            <li><a href="/eventgallery" className="text-sm hover:text-white/90 hover:underline transition-all">Events</a></li>
+            <li><a href="/contact" className="text-sm hover:text-white/90 hover:underline transition-all">Contact</a></li>
           </ul>
         </div>
 
@@ -40,13 +38,9 @@ export default function FooterSection() {
         <div className="space-y-4">
           <h4 className="text-xl font-semibold mb-4 border-b border-white/20 pb-2 inline-block">Quick Links</h4>
           <ul className="space-y-3">
-            {['Privacy Policies', 'Donate Now', 'Get Involved'].map((item) => (
-              <li key={item}>
-                <a href="#" className="text-sm hover:text-white/90 hover:underline transition-all">
-                  {item}
-                </a>
-              </li>
-            ))}
+            <li><a href="/privacy" className="text-sm hover:text-white/90 hover:underline transition-all">Privacy Policy</a></li>
+            <li><a href="/bankingdetails" className="text-sm hover:text-white/90 hover:underline transition-all">Donate Now</a></li>
+            <li><a href="/becomesponsor" className="text-sm hover:text-white/90 hover:underline transition-all">Get Involved</a></li>
           </ul>
         </div>
 
@@ -64,14 +58,16 @@ export default function FooterSection() {
       <div className="border-t border-white/20 mt-12 pt-8 px-6 max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex flex-col sm:flex-row items-center gap-4">
-            <img 
-              src="/images/footer/footer.png" 
-              alt="Leruo Logo" 
-              className="h-8 w-auto filter brightness-0 invert"
-            />
+            <a href="/">
+              <img 
+                src="/images/footer/footer.png" 
+                alt="Leruo Logo" 
+                className="h-8 w-auto filter brightness-0 invert hover:opacity-90 transition-opacity"
+              />
+            </a>
             <p className="text-sm text-white/80">
               &copy; {new Date().getFullYear()} All Rights Reserved by{' '}
-              <span className="font-medium text-white">Leruo Foundation</span>
+              <a href="/" className="font-medium text-white hover:underline">Leruo Foundation</a>
             </p>
           </div>
           
