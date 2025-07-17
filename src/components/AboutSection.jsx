@@ -78,7 +78,7 @@ export default function AboutSection() {
               Championing Growth for Small Businesses, Women Leaders and Youth Innovators.
             </p>
             <p className="text-gray-600 leading-relaxed mb-8">
-              We equip small business owners, women CEOs, and youthpreneurs with mentorship, funding, and tools to build sustainable enterprises, driving job creation and generational wealth.
+              We equip small Business Owners, Women CEOs, and Youthpreneurs with mentorship, and tools to build sustainable enterprises, driving job creation and generational wealth.
             </p>
 
             {/* Mission & Vision Section */}
