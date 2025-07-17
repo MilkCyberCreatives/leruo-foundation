@@ -6,12 +6,13 @@ export default function ContactSection() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    subject: '',
+    subject: 'Website Contact Form', // Fixed subject as requested
     message: ''
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [error, setError] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -21,27 +22,53 @@ export default function ContactSection() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
-      console.log('Form submitted:', formData);
-      setIsSubmitting(false);
-      setSubmitSuccess(true);
+    // Check if all fields are filled
+    if (!formData.name || !formData.email || !formData.message) {
+      setError('Please fill in all fields');
+      return;
+    }
+
+    setIsSubmitting(true);
+    setError('');
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: 'YOUR_WEB3FORMS_ACCESS_KEY', // Replace with your actual access key
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          redirect: false
+        }),
+      });
+
+      const result = await response.json();
       
-      // Reset form after 3 seconds
-      setTimeout(() => {
-        setSubmitSuccess(false);
+      if (result.success) {
+        setSubmitSuccess(true);
+        // Reset form
         setFormData({
           name: '',
           email: '',
-          subject: '',
+          subject: 'Website Contact Form', // Reset to fixed subject
           message: ''
         });
-      }, 3000);
-    }, 1500);
+      } else {
+        setError(result.message || 'Failed to send message');
+      }
+    } catch (err) {
+      setError('An error occurred while sending your message');
+      } finally {
+        setIsSubmitting(false);
+      }
   };
 
   return (
@@ -140,13 +167,16 @@ export default function ContactSection() {
 
               <div>
                 <input
-                  type="text"
+                  type="hidden"
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  required
-                  placeholder="Subject"
-                  className="border border-gray-300 rounded-lg px-4 py-3 w-full focus:outline-none focus:ring-2 focus:ring-[#48101f] focus:border-transparent"
+                />
+                <input
+                  type="text"
+                  value={formData.subject}
+                  readOnly
+                  className="border border-gray-300 rounded-lg px-4 py-3 w-full bg-gray-100 cursor-not-allowed"
                 />
               </div>
 
@@ -165,11 +195,17 @@ export default function ContactSection() {
                 ></textarea>
               </div>
 
+              {error && (
+                <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg">
+                  {error}
+                </div>
+              )}
+
               <div>
                 <button
                   type="submit"
-                  disabled={isSubmitting}
-                  className={`flex items-center justify-center w-full bg-[#48101f] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#3a0c19] transition-colors ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
+                  disabled={isSubmitting || !formData.name || !formData.email || !formData.message}
+                  className={`flex items-center justify-center w-full bg-[#48101f] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#3a0c19] transition-colors ${isSubmitting || !formData.name || !formData.email || !formData.message ? 'opacity-70 cursor-not-allowed' : ''}`}
                 >
                   {isSubmitting ? (
                     <>
