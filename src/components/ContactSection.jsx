@@ -67,8 +67,8 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-[#48101f]">Phone</h4>
-                  <a href="tel:+27791234567" className="text-gray-700 hover:text-[#48101f] transition">
-                    +27 79 123 4567
+                  <a href="tel:+27 77 605 2454" className="text-gray-700 hover:text-[#48101f] transition">
+                    +27 77 605 2454
                   </a>
                   <p className="text-sm text-gray-500 mt-1">Mon-Fri, 9am-5pm</p>
                 </div>
@@ -80,8 +80,8 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-[#48101f]">Email</h4>
-                  <a href="mailto:info@leruofoundation.org" className="text-gray-700 hover:text-[#48101f] transition">
-                    info@leruofoundation.org
+                  <a href="mailto:connect@leruofoundation.org" className="text-gray-700 hover:text-[#48101f] transition">
+                    connect@leruofoundation.org
                   </a>
                   <p className="text-sm text-gray-500 mt-1">We respond within 24 hours</p>
                 </div>
