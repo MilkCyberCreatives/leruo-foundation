@@ -1,9 +1,12 @@
 'use client';
 import React from 'react';
-import { FaUsers, FaCalendarAlt, FaHandshake, FaChartLine, FaFileDownload, FaPhoneAlt } from 'react-icons/fa';
+import { FaUsers, FaCalendarAlt, FaHandshake, FaChartLine, FaFileDownload, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
 import Link from 'next/link';
 
 export default function BrandingCircleWhyJoin() {
+  // Updated PDF path
+  const pdfPath = "/pdfs/BCECSA_Application_Form.pdf";
+
   return (
     <section className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-20">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
@@ -12,7 +15,7 @@ export default function BrandingCircleWhyJoin() {
           <h2 className="text-2xl sm:text-3xl font-bold text-[#48101f] mb-8">
             Why Join the Branding Chief Executive Circle SA?
           </h2>
-          
+
           <ul className="space-y-6">
             {[
               { icon: <FaUsers className="text-lg" />, title: "Networking Opportunities", desc: "Connect with influential branding experts and entrepreneurs." },
@@ -33,12 +36,12 @@ export default function BrandingCircleWhyJoin() {
           </ul>
         </div>
 
-        {/* Right Side - CTA with Visual Balance */}
+        {/* Right Side - CTA */}
         <div className="relative bg-white rounded-xl p-8 border border-[#48101f] shadow-sm flex flex-col">
           {/* Decorative Elements */}
           <div className="absolute -top-6 -right-6 w-24 h-24 bg-[#f8f1f3] rounded-full z-0 hidden lg:block"></div>
           <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-[#f8f1f3] rounded-full z-0 hidden lg:block"></div>
-          
+
           <div className="relative z-10 h-full flex flex-col">
             <div className="mb-8 space-y-6 flex-grow">
               <h3 className="text-2xl font-semibold text-[#48101f]">Ready to Elevate Your Brand?</h3>
@@ -58,20 +61,24 @@ export default function BrandingCircleWhyJoin() {
                 <h4 className="font-medium text-[#48101f] mb-2">Simple Application Process:</h4>
                 <ol className="text-sm text-gray-700 space-y-2 list-decimal list-inside">
                   <li>Download and complete the application form</li>
-                  <li>Email to applications@brandingcircle.co.za</li>
+                  <li className="flex items-baseline">
+                    <span className="mr-1">Email to:</span>
+                    <a href="mailto:connect@leruofoundation.org" className="text-[#48101f] font-medium inline-flex items-center">
+                      <FaEnvelope className="mr-1" /> connect@leruofoundation.org
+                    </a>
+                  </li>
                   <li>Receive approval within 3 business days</li>
                 </ol>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href="/public/pdfs/BrandingChiefExecutiveCircleSA_ApplicationForm.pdf"
+                  href={pdfPath}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 flex items-center justify-center gap-2 bg-[#48101f] hover:bg-[#5a1a2d] text-white font-medium py-3 px-6 rounded-lg transition-colors duration-300"
-                  download="BrandingChiefExecutiveCircleSA_ApplicationForm.pdf"
                 >
-                  <FaFileDownload /> Download Application
+                  <FaFileDownload /> View Application Form
                 </a>
                 <Link
                   href="/contact"
