@@ -1,10 +1,10 @@
 export default function HeroBanner() {
-  // Updated Google Drive video URL (streamable)
-  const videoUrl = "https://drive.google.com/uc?export=download&id=1rAz0AS17pqRl3TftHP622TnF7pXD_VXX";
+  // Cloudinary-hosted video URL
+  const videoUrl = "https://res.cloudinary.com/dpkqxcdlv/video/upload/v1752740523/hero_fi1w4g.mp4";
 
   return (
     <section className="relative w-full h-screen overflow-hidden">
-      {/* Background Video - now from Google Drive */}
+      {/* Background Video - Cloudinary */}
       <video
         src={videoUrl}
         className="absolute top-0 left-0 w-full h-full object-cover"
@@ -12,8 +12,6 @@ export default function HeroBanner() {
         muted
         loop
         playsInline
-        onLoadedMetadata={(e) => e.target.play()}
-        onCanPlay={(e) => e.target.play()}
       />
 
       {/* Overlay */}
