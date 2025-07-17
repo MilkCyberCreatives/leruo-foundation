@@ -4,9 +4,9 @@ import { motion } from 'framer-motion';
 
 export default function AboutImpact() {
   const stats = [
-    { value: "100+", label: "Youthpreneurs Empowered" },
-    { value: "50+", label: "Women Entrepreneurs Supported" },
-    { value: "20+", label: "Programs & Workshops Hosted" }
+    { value: "20+", label: "Youthpreneurs Empowered" },
+    { value: "12+", label: "Women Entrepreneurs Supported" },
+    { value: "03+", label: "Programs & Workshops Hosted" }
   ];
 
   const container = {
