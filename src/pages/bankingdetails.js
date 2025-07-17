@@ -31,14 +31,14 @@ export default function BankingDetailsPage() {
               <p><strong>Branch Code:</strong> 250655</p>
             </div>
           </div>
-          <div className="mt-8 text-center">
+          {/* <div className="mt-8 text-center">
             <a
               href="/foundation-profile.pdf"
               className="inline-block bg-[#ffc107] text-black font-semibold px-8 py-3 rounded-full hover:bg-[#e0a800] transition"
             >
               Download Foundation Profile
             </a>
-          </div>
+          </div> */}
         </div>
       </section>
 

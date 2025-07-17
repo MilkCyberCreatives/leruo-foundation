@@ -9,7 +9,7 @@ export default function EventGalleryHero() {
     >
       <div className="absolute inset-0 bg-[#48101f] opacity-80 z-0" />
       <div className="relative z-10 text-center px-4">
-        <h1 className="text-4xl md:text-5xl font-bold">Event Gallery</h1>
+        <h1 className="text-4xl md:text-5xl font-bold">Events Gallery</h1>
         <p className="text-lg mt-2">
           Browse through special moments from our impactful events.
         </p>

@@ -23,14 +23,8 @@ export default function BecomeSponsorPage() {
       {/* Section 1 */}
       <section className="bg-white py-20 px-6 animate-fade-in">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#48101f] mb-6 animate-slide-up">
-            How to Get Involved
-          </h2>
-          <p className="text-gray-700 max-w-3xl mx-auto mb-10 text-xl leading-relaxed animate-slide-up delay-100">
-            Partner with Us to Empower Small Business Owners and Youth Entrepreneurs.
-          </p>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mt-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mt-2">
             <div className="bg-gradient-to-br from-[#f9f2e8] to-white p-8 rounded-2xl shadow-lg border border-[#f0e6e6] animate-float">
               <h3 className="text-2xl font-semibold text-[#48101f] mb-4">We Provide:</h3>
               <ul className="space-y-4 text-gray-700 text-lg">
@@ -39,12 +33,6 @@ export default function BecomeSponsorPage() {
                     <FaHandsHelping className="text-sm" />
                   </span>
                   Mentorship & Training Programs
-                </li>
-                <li className="flex items-start">
-                  <span className="bg-[#48101f] text-[#ffc107] p-2 rounded-full mr-3 mt-1">
-                    <FaMoneyBillWave className="text-sm" />
-                  </span>
-                  Access to Funding & Grants
                 </li>
                 <li className="flex items-start">
                   <span className="bg-[#48101f] text-[#ffc107] p-2 rounded-full mr-3 mt-1">
@@ -64,7 +52,7 @@ export default function BecomeSponsorPage() {
             <div className="text-left animate-slide-up delay-200">
               <div className="relative pl-8 before:absolute before:left-0 before:top-0 before:h-full before:w-1 before:bg-[#48101f]">
                 <p className="text-gray-700 text-lg mb-6">
-                  We have supported hundreds of small businesses and youth entrepreneurs to create jobs, boost local economies, and foster innovation.
+                  We aim to support small businesses and youth entrepreneurs create jobs, boost local economies, and foster innovation.
                 </p>
                 <p className="text-gray-700 text-lg font-medium">
                   Your partnership will expand that impact and help us reach even more aspiring entrepreneurs.
@@ -152,7 +140,7 @@ export default function BecomeSponsorPage() {
                 </div>
               </div>
               <button className="mt-8 w-full bg-[#ffc107] text-[#48101f] py-3 rounded-lg font-semibold flex items-center justify-center group hover:bg-white transition">
-                Explore Sponsorship Packages
+                Explore Events Sponsorship Packages
                 <FaArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
               </button>
             </div>
@@ -168,7 +156,7 @@ export default function BecomeSponsorPage() {
               Ways You Can <span className="text-[#ffc107]">Contribute</span>
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto animate-slide-up delay-100">
-              Choose the contribution method that aligns with your goals and capabilities
+              Choose the contribution method that best suits your objectives and resources.
             </p>
           </div>
 
@@ -208,10 +196,10 @@ export default function BecomeSponsorPage() {
                 </div>
                 <h4 className="text-xl font-semibold text-[#48101f] mb-3">{item.title}</h4>
                 <p className="text-gray-600 mb-4">{item.description}</p>
-                <button className="text-sm text-[#48101f] font-medium flex items-center group">
+                {/* <button className="text-sm text-[#48101f] font-medium flex items-center group">
                   Learn more
                   <FaArrowRight className="ml-2 text-xs transition-transform group-hover:translate-x-1" />
-                </button>
+                </button> */}
               </div>
             ))}
           </div>
@@ -226,7 +214,7 @@ export default function BecomeSponsorPage() {
             Join us in empowering the next generation of entrepreneurs and change-makers
           </p>
 
-          <div className="bg-white p-8 rounded-2xl shadow-lg border border-[#f0e6e6] text-left mb-8 hover:shadow-xl transition">
+          {/* <div className="bg-white p-8 rounded-2xl shadow-lg border border-[#f0e6e6] text-left mb-8 hover:shadow-xl transition">
             <h3 className="text-2xl font-semibold text-[#48101f] mb-6 text-center">Banking Details</h3>
             <div className="grid md:grid-cols-2 gap-6">
               <div>
@@ -250,7 +238,7 @@ export default function BecomeSponsorPage() {
                 <p className="font-medium">250655</p>
               </div>
             </div>
-          </div>
+          </div> */}
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/bankingdetails" legacyBehavior>

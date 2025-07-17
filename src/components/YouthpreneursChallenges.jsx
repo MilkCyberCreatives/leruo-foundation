@@ -18,11 +18,6 @@ const challenges = [
       'While digital networks are growing, many youth entrepreneurs may lack connections with industry professionals, potential partners, or investors who can help them scale.',
   },
   {
-    title: 'Work-Life Balance',
-    content:
-      'Balancing the demands of running a business with personal life, education, or part-time jobs can be difficult for young entrepreneurs, leading to burnout or stress.',
-  },
-  {
     title: 'Limited Business Knowledge',
     content:
       'While many young entrepreneurs are passionate and creative, they may need more formal business education to tackle complex issues like scaling, finance, or hiring.',
@@ -38,13 +33,23 @@ export default function YouthpreneursChallenges() {
 
   return (
     <section className="bg-white py-16 md:py-20 px-6 md:px-8 lg:px-12">
+
+
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 lg:gap-12">
         {/* LEFT COLUMN - Accordion and Image */}
+
+<div className="border border-gray-200 rounded-xl p-6 md:p-8 h-full">
+
         <div className="w-full flex flex-col justify-between">
           <div>
-            <h2 className="text-2xl md:text-3xl font-bold text-[#48101f] mb-6">
-              Key Challenges Faced by Youthpreneurs
-            </h2>
+
+            <div className="bg-[#f9f2f1] p-4 rounded-lg mb-6">
+              <h3 className="text-2xl md:text-3xl font-bold text-[#48101f] leading-tight">
+                Challenges Faced by Youthpreneurs
+              </h3>
+            </div>
+
+
             <div className="space-y-3">
               {challenges.map((item, index) => (
                 <div 
@@ -88,6 +93,7 @@ export default function YouthpreneursChallenges() {
             className="rounded-xl mt-8 shadow-md"
           />
         </div>
+        </div>
 
         {/* RIGHT COLUMN - Content */}
         <div className="w-full">
@@ -102,9 +108,13 @@ export default function YouthpreneursChallenges() {
               <div className="space-y-5 text-gray-700 text-base md:text-[17px] leading-relaxed">
                 <p>
                   Youthpreneurs are the future of entrepreneurship, bringing fresh ideas, energy, and a 
-                  global perspective to the business world. By supporting and empowering them, we can 
-                  foster the next generation of business leaders, innovators, and problem-solvers who 
-                  will reshape industries and create positive change in society.
+                      global perspective to the business world. By supporting and empowering them, we can 
+                      foster the next generation of business leaders, innovators, and problem-solvers who 
+                      will reshape industries and create positive change in society. Whether through 
+                      mentorship, funding, or education, helping Youthpreneurs succeed is an investment in 
+                      a brighter, more innovative tomorrow. To ensure that Youthpreneurs succeed and 
+                      thrive, it’s important to provide the right ecosystem of support, and that is what Leruo 
+                      Foundation, and our partners are committed to doing.
                 </p>
                 
                 <div className="border-l-4 border-[#48101f] pl-4 py-1">
@@ -127,10 +137,7 @@ export default function YouthpreneursChallenges() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                   </svg>
                   <div>
-                    <p className="font-bold text-[#48101f] text-lg">Collaboration is key</p>
-                    <p className="text-gray-700 mt-1">
-                      By building strong entrepreneurial ecosystems together, we're creating a brighter future where youth innovation thrives.
-                    </p>
+                    <p className="font-bold text-[#48101f] text-lg">Collaboration is key to building strong entrepreneurial ecosystems. Let’s create a brighter, entrepreneurial future together!</p>
                     <button className="mt-3 bg-[#48101f] hover:bg-[#3a0c19] text-white font-medium py-2 px-5 rounded-lg transition duration-200">
                       Join the Movement
                     </button>

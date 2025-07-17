@@ -9,9 +9,6 @@ export default function YouthpreneursIncubation() {
         {/* Left: Text Description */}
         <div className="flex flex-col justify-center">
           <div className="mb-6">
-            <span className="inline-block bg-[#48101f] text-white text-sm font-semibold px-3 py-1 rounded-full mb-3">
-              Empowering Youth Entrepreneurs
-            </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#48101f] mb-4 md:mb-6 leading-tight">
               Changemakers Incubation Program
             </h2>
@@ -24,9 +21,6 @@ export default function YouthpreneursIncubation() {
             <p>
               Through comprehensive training, mentorship, and resources, we help transform innovative ideas 
               into viable ventures that create social and economic value.
-            </p>
-            <p className="font-medium text-[#48101f]">
-              Applications open for 2024 cohort starting March 1st.
             </p>
           </div>
         </div>
@@ -90,7 +84,7 @@ export default function YouthpreneursIncubation() {
             {/* CTA Buttons */}
             <div className="space-y-3">
               <a
-                href="/pdfs/youthpreneurs-changemakers.pdf"
+                href="/pdfs/Leruo_Foundation_Changemakers_Incubation_Program.pdf"
                 className="flex items-center justify-center bg-[#48101f] hover:bg-[#3a0c19] text-white font-medium px-6 py-3 rounded-lg transition-colors"
                 download
               >
@@ -98,12 +92,6 @@ export default function YouthpreneursIncubation() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
                 </svg>
                 Download Full Program Guide
-              </a>
-              <a
-                href="#apply"
-                className="flex items-center justify-center border-2 border-[#48101f] text-[#48101f] hover:bg-[#48101f] hover:text-white font-medium px-6 py-3 rounded-lg transition-colors"
-              >
-                Express Interest
               </a>
             </div>
           </div>

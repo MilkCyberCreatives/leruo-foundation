@@ -12,7 +12,7 @@ export default function WomenCeoPage() {
       <TopBar />
       <MainHeader />
       <WomenCeoHero />
-      <WomenCeoIntro />
+      {/* <WomenCeoIntro /> */}
       <WomenCeoLaunchSection />
       <FooterSection />
     </>

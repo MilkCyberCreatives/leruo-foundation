@@ -13,7 +13,7 @@ export default function EventGalleryCards() {
             className="w-full h-56 object-cover rounded-t-lg"
           />
           <div className="p-6">
-            <h3 className="text-xl font-semibold text-[#48101f] mb-2">Youthpreneurs 2025</h3>
+            <h3 className="text-xl font-semibold text-[#48101f] mb-2">Youthpreneurs Summit 2025</h3>
             <p className="text-sm text-gray-700 mb-4">
               Highlights from our Youthpreneurs event focused on innovation, empowerment, and business growth.
             </p>

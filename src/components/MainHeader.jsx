@@ -77,7 +77,7 @@ export default function MainHeader() {
               </div>
 
               <Link href="/eventgallery" className="text-[#48101f] hover:text-[#6a1b2e] font-medium transition-colors">
-                Event Gallery
+                Events Gallery
               </Link>
 
               <Link href="/contact" className="text-[#48101f] hover:text-[#6a1b2e] font-medium transition-colors">

@@ -8,9 +8,6 @@ export default function SponsorshipSection() {
         {/* Header */}
         <div className="bg-gradient-to-r from-[#48101f] to-[#6a1a2f] text-white rounded-xl p-8 md:p-10 mb-12 md:mb-16 shadow-lg">
           <div className="max-w-4xl">
-            <span className="inline-block bg-white/20 text-white text-sm font-semibold px-3 py-1 rounded-full mb-4">
-              Partner With Us
-            </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
               Sponsorship Opportunities
             </h2>

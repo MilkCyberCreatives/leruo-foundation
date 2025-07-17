@@ -9,9 +9,9 @@ export default function SponsorHero() {
     >
       <div className="absolute inset-0 bg-[#48101f] opacity-80 z-0" />
       <div className="relative z-10 text-center px-4">
-        <h1 className="text-4xl md:text-5xl font-bold">Become A Sponsor</h1>
+        <h1 className="text-4xl md:text-5xl font-bold">How to Get Involved</h1>
         <p className="text-lg mt-2">
-          Partner with us to empower entrepreneurs and build brighter futures.
+          Partner with us to empower young entrepreneurs and build brighter futures.
         </p>
       </div>
     </section>

@@ -12,11 +12,11 @@ export default function YouthpreneursIntro() {
           {/* Text Content */}
           <div className="w-full lg:w-1/2">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-leruo mb-6">
-              What is the Youthpreneurs Program?
+              Youthpreneurs Summit
             </h2>
             <div className="space-y-4 text-gray-700">
               <p className="text-base sm:text-lg leading-relaxed">
-                Youthpreneurs is our annual event that takes place on the 16th of June.
+                Youthpreneurs Summit is our annual event that takes place on the 16th of June.
                 The event is dedicated to the emerging class of young entrepreneurs who are
                 passionate about starting and growing businesses.
               </p>

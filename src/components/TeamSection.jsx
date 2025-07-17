@@ -6,29 +6,19 @@ import { motion } from 'framer-motion';
 const teamMembers = [
   {
     name: 'Connie Matlejoane',
-    role: 'Chairperson',
-    image: '/images/team/connie.jpg',
+    image: '/images/team/bosslady.jpg',
     facebook: '#',
     linkedin: '#',
   },
   {
-    name: 'Peter Matlejoane',
-    role: 'Treasurer',
-    image: '/images/team/peter.jpg',
+    name: 'Tshimo & Botshelo',
+    image: '/images/team/twins.jpg',
     facebook: '#',
     linkedin: '#',
   },
   {
     name: 'Faith Maswanganyi',
-    role: 'Secretary',
-    image: '/images/team/faith.jpg',
-    facebook: '#',
-    linkedin: '#',
-  },
-  {
-    name: 'John Doe',
-    role: 'Marketing Director',
-    image: '/images/team/faith.jpg',
+    image: '/images/team/faithm.jpg',
     facebook: '#',
     linkedin: '#',
   },
@@ -65,7 +55,7 @@ export default function TeamSection() {
           transition={{ duration: 0.8 }}
           className="max-w-7xl mx-auto px-6 text-center"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Executive Leadership</h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Foundation Team</h2>
           <p className="text-lg md:text-xl max-w-3xl mx-auto opacity-90">
             Our experienced team drives the foundation's vision with strategic direction and operational excellence.
           </p>
@@ -79,7 +69,7 @@ export default function TeamSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-100px' }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-6"
         >
           {teamMembers.map((member, index) => (
             <motion.div

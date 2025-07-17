@@ -20,10 +20,10 @@ export default function BrandingCircleIntro() {
         {/* Text Content - Left */}
         <div className="space-y-6">
           <h2 className="text-3xl sm:text-4xl font-bold text-[#48101f] leading-tight">
-            What is Branding Circle?
+            About Branding Chief Executive Circle SA
           </h2>
           <p className="text-gray-700 text-lg leading-relaxed">
-            Branding Circle is an initiative aimed at equipping entrepreneurs with the knowledge, tools,
+            Branding Chief Executive Circle SA is an initiative aimed at equipping entrepreneurs with the knowledge, tools,
             and mentorship needed to develop powerful brand identities that resonate with their target markets.
             Through interactive workshops, expert-led discussions, and real-life brand case studies, participants
             learn to build authentic and impactful brand strategies that drive business success.

@@ -19,7 +19,7 @@ export default function YouthpreneursGallery() {
   }, []);
 
   const imageList = Array.from({ length: 12 }, (_, i) => ({
-    src: `/images/youthpreneurs/yp${i + 1}.jpg`,
+    src: `/images/youthpreneurs/gallery/yg${i + 1}.jpg`,
     alt: `Youthpreneurs Image ${i + 1}`,
   }));
 
