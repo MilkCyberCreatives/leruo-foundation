@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import Head from 'next/head';
 import TopBar from '@/components/TopBar';
 import MainHeader from '@/components/MainHeader';
 import FooterSection from '@/components/FooterSection';
@@ -7,12 +8,18 @@ import FooterSection from '@/components/FooterSection';
 export default function SponsorshipPackagesPage() {
   return (
     <>
+      <Head>
+        <title>Sponsorship Packages | Leruo Foundation</title>
+        <meta
+          name="description"
+          content="Explore Leruo Foundation's sponsorship packages to support youth entrepreneurship and community empowerment."
+        />
+      </Head>
 
       <TopBar />
       <MainHeader />
 
       <main>
-        {/* Hero Section */}
         <section className="bg-[#48101f] text-white py-20 px-6 text-center">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Sponsorship Packages</h1>
@@ -22,11 +29,10 @@ export default function SponsorshipPackagesPage() {
           </div>
         </section>
 
-        {/* Sponsorship Details */}
         <section className="bg-white py-20 px-6">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-[#48101f] text-center mb-10">
-              Why Partner with Leruo Foundation's Youthpreneurs Programme
+              Why Partner with Leruo Foundation&apos;s Youthpreneurs Programme
             </h2>
             <p className="text-gray-700 max-w-3xl mx-auto text-center mb-10">
               Your sponsorship will help us:
@@ -38,7 +44,6 @@ export default function SponsorshipPackagesPage() {
               <li>Build a thriving entrepreneurial community in South Africa.</li>
             </ul>
 
-            {/* Sponsorship Table */}
             <div className="overflow-x-auto rounded-lg border border-gray-200 shadow-md">
               <table className="w-full table-auto text-left">
                 <thead className="bg-[#f5f0f0] text-[#48101f]">
@@ -106,7 +111,7 @@ export default function SponsorshipPackagesPage() {
             </div>
 
             <p className="text-center mt-16 text-2xl font-bold text-[#48101f]">
-              Let’s build a brighter, entrepreneurial future together!
+              Let&apos;s build a brighter, entrepreneurial future together!
             </p>
           </div>
         </section>
