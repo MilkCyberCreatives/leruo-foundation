@@ -51,7 +51,7 @@ export default function SponsorshipPackagesPage() {
                   <td className="px-6 py-6 align-top">
                     <span className="text-xl font-bold text-[#48101f]">Platinum Partner</span>
                     <br />
-                    <span className="text-sm text-gray-500">(R100,000+)</span>
+                    <span className="text-sm text-gray-500">(R300,000+)</span>
                   </td>
                   <td className="px-6 py-6 align-top">
                     Full sponsorship of the Youthpreneurs Programme, including workshops, mentorship sessions, and a pitch competition.
@@ -69,7 +69,7 @@ export default function SponsorshipPackagesPage() {
                   <td className="px-6 py-6 align-top">
                     <span className="text-xl font-bold text-[#48101f]">Gold Partner</span>
                     <br />
-                    <span className="text-sm text-gray-500">(R50,000 – R99,999)</span>
+                    <span className="text-sm text-gray-500">(R100,000 – R300,000)</span>
                   </td>
                   <td className="px-6 py-6 align-top">
                     Support key programme activities like educational sessions and networking events.
@@ -86,7 +86,7 @@ export default function SponsorshipPackagesPage() {
                   <td className="px-6 py-6 align-top">
                     <span className="text-xl font-bold text-[#48101f]">Silver Partner</span>
                     <br />
-                    <span className="text-sm text-gray-500">(R20,000 – R49,999)</span>
+                    <span className="text-sm text-gray-500">(R50,000 – R100,000)</span>
                   </td>
                   <td className="px-6 py-6 align-top">
                     Contribute to mentorship programmes and resource development.
