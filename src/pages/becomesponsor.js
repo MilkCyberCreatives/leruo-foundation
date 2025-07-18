@@ -139,12 +139,7 @@ export default function BecomeSponsorPage() {
                   </div>
                 </div>
               </div>
-              <a
-  href="/sponsorshippackages"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="block mt-8 w-full"
->
+              <a href="/sponsorshippackages" className="block mt-8 w-full">
   <button className="w-full bg-[#ffc107] text-[#48101f] py-3 rounded-lg font-semibold flex items-center justify-center group hover:bg-white transition">
     Explore Events Sponsorship Packages
     <FaArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
