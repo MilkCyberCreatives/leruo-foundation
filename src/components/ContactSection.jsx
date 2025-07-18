@@ -172,7 +172,7 @@ export default function ContactSection() {
 
               {submitSuccess && (
                 <div className="bg-green-100 text-green-700 px-4 py-3 rounded-lg mt-4">
-                  ✅ Your message has been sent successfully. Please check your email!
+                  ✅ Your message has been sent successfully!
                 </div>
               )}
             </form>
