@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import Head from 'next/head';
 import TopBar from '@/components/TopBar';
 import MainHeader from '@/components/MainHeader';
 import FooterSection from '@/components/FooterSection';
@@ -8,14 +7,6 @@ import FooterSection from '@/components/FooterSection';
 export default function SponsorshipPackagesPage() {
   return (
     <>
-      <Head>
-        <title>Sponsorship Packages | Leruo Foundation</title>
-        <meta
-          name="description"
-          content="Explore Leruo Foundation's sponsorship packages to support youth entrepreneurship and community empowerment."
-        />
-      </Head>
-
       <TopBar />
       <MainHeader />
 
