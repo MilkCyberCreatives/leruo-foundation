@@ -69,4 +69,19 @@ body {
 .delay-200 {
   animation-delay: 0.2s;
 }
-/* Add more delays as needed */
+
+
+
+/* Section Spacing */
+
+section {
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
+}
+
+/* Tighter Section Spacing */
+
+/* section {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+} */
