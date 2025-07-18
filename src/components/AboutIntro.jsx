@@ -26,10 +26,10 @@ export default function AboutIntro() {
   const images = [
     { top: '2%', left: '0%', src: 'about/aboutus1.jpg' },
     { top: '10%', left: '40%', src: 'about/aboutus2.jpg' },
-    { top: '48%', left: '5%', src: 'about/aboutus3.jpg' },
+    { top: '55%', left: '5%', src: 'about/aboutus3.jpg' },
     { top: '42%', left: '55%', src: 'about/aboutus4.jpg' },
     { top: '20%', left: '20%', src: 'about/aboutus5.jpg' },
-    { top: '60%', left: '40%', src: 'about/aboutus6.jpg' }
+    { top: '66%', left: '40%', src: 'about/aboutus6.jpg' }
   ];
 
   return (
