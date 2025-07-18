@@ -23,6 +23,15 @@ export default function AboutIntro() {
     }
   };
 
+  const images = [
+    { top: '2%', left: '0%', src: 'about/aboutus1.jpg' },
+    { top: '10%', left: '40%', src: 'about/aboutus2.jpg' },
+    { top: '48%', left: '5%', src: 'about/aboutus3.jpg' },
+    { top: '42%', left: '55%', src: 'about/aboutus4.jpg' },
+    { top: '20%', left: '20%', src: 'about/aboutus5.jpg' },
+    { top: '60%', left: '40%', src: 'about/aboutus6.jpg' }
+  ];
+
   return (
     <section className="bg-white py-16 md:py-24 px-5 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -67,15 +76,7 @@ export default function AboutIntro() {
                 href="/pdfs/leruo_company_profile.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="
-                  inline-flex items-center justify-center
-                  bg-leruo hover:bg-[#3a0e1a] text-white
-                  font-medium py-3 px-6 rounded-full
-                  transition-all duration-300
-                  shadow-md hover:shadow-lg
-                  transform hover:-translate-y-0.5
-                  border border-leruo/10
-                "
+                className="inline-flex items-center justify-center bg-leruo hover:bg-[#3a0e1a] text-white font-medium py-3 px-6 rounded-full transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 border border-leruo/10"
               >
                 <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
@@ -85,19 +86,31 @@ export default function AboutIntro() {
             </motion.div>
           </div>
 
-          {/* Image */}
-          <motion.div className="w-full lg:w-1/2" variants={item}>
-            <div className="relative overflow-hidden rounded-xl shadow-2xl aspect-[4/3]">
-              <motion.img
-                src="/images/about-1.jpg"
-                alt="Leruo Foundation team"
-                className="absolute inset-0 w-full h-full object-cover"
-                initial={{ opacity: 0, scale: 1.05 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
+          {/* Image Collage (Right) */}
+          <motion.div
+            className="w-full lg:w-1/2 relative h-[500px] sm:h-[580px] hidden sm:flex items-center justify-center"
+            variants={item}
+          >
+            {/* Background Blur Circle */}
+            <div className="absolute top-1/2 left-1/2 w-[90%] h-[90%] -translate-x-1/2 -translate-y-1/2 rounded-[60px] bg-leruo opacity-10 blur-3xl -z-10"></div>
+
+            {/* Image Grid */}
+            <div className="relative w-full h-full max-w-[520px] mx-auto">
+              {images.map((img, i) => (
+                <motion.div
+                  key={i}
+                  className={`absolute w-[42%] h-[40%]`}
+                  style={{ top: img.top, left: img.left }}
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <img
+                    src={`/images/${img.src}`}
+                    alt={`Gallery ${i + 1}`}
+                    className="rounded-xl object-cover w-full h-full border-4 border-white shadow-lg"
+                  />
+                </motion.div>
+              ))}
             </div>
           </motion.div>
         </motion.div>
