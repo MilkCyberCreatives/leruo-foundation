@@ -23,7 +23,6 @@ export default function BecomeSponsorPage() {
       {/* Section 1 */}
       <section className="bg-white py-20 px-6 animate-fade-in">
         <div className="max-w-6xl mx-auto text-center">
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mt-2">
             <div className="bg-gradient-to-br from-[#f9f2e8] to-white p-8 rounded-2xl shadow-lg border border-[#f0e6e6] animate-float">
               <h3 className="text-2xl font-semibold text-[#48101f] mb-4">We Provide:</h3>
@@ -139,13 +138,16 @@ export default function BecomeSponsorPage() {
                   </div>
                 </div>
               </div>
-              <a href="/sponsorshippackages" className="block mt-8 w-full">
-  <button className="w-full bg-[#ffc107] text-[#48101f] py-3 rounded-lg font-semibold flex items-center justify-center group hover:bg-white transition">
-    Explore Events Sponsorship Packages
-    <FaArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
-  </button>
-</a>
 
+              {/* ✅ Fixed for deployment */}
+              <Link href="/sponsorshippackages" legacyBehavior>
+                <a className="block mt-8 w-full">
+                  <button className="w-full bg-[#ffc107] text-[#48101f] py-3 rounded-lg font-semibold flex items-center justify-center group hover:bg-white transition">
+                    Explore Events Sponsorship Packages
+                    <FaArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
+                  </button>
+                </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -199,49 +201,19 @@ export default function BecomeSponsorPage() {
                 </div>
                 <h4 className="text-xl font-semibold text-[#48101f] mb-3">{item.title}</h4>
                 <p className="text-gray-600 mb-4">{item.description}</p>
-                {/* <button className="text-sm text-[#48101f] font-medium flex items-center group">
-                  Learn more
-                  <FaArrowRight className="ml-2 text-xs transition-transform group-hover:translate-x-1" />
-                </button> */}
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Banking Section */}
+      {/* Banking CTA Section */}
       <section className="bg-gradient-to-b from-white to-[#faf5f3] py-20 px-6">
         <div className="max-w-3xl mx-auto text-center animate-fade-in">
           <h2 className="text-4xl font-bold text-[#48101f] mb-4">Ready to Make an Impact?</h2>
           <p className="text-gray-600 mb-10 max-w-2xl mx-auto">
             Join us in empowering the next generation of entrepreneurs and change-makers
           </p>
-
-          {/* <div className="bg-white p-8 rounded-2xl shadow-lg border border-[#f0e6e6] text-left mb-8 hover:shadow-xl transition">
-            <h3 className="text-2xl font-semibold text-[#48101f] mb-6 text-center">Banking Details</h3>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <p className="text-gray-500 text-sm">Bank</p>
-                <p className="font-medium">FNB / RMB</p>
-              </div>
-              <div>
-                <p className="text-gray-500 text-sm">Account Holder</p>
-                <p className="font-medium">Leruo Foundation NPC</p>
-              </div>
-              <div>
-                <p className="text-gray-500 text-sm">Account Type</p>
-                <p className="font-medium">Gold Business Account</p>
-              </div>
-              <div>
-                <p className="text-gray-500 text-sm">Account Number</p>
-                <p className="font-medium">63133839944</p>
-              </div>
-              <div className="md:col-span-2">
-                <p className="text-gray-500 text-sm">Branch Code</p>
-                <p className="font-medium">250655</p>
-              </div>
-            </div>
-          </div> */}
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/bankingdetails" legacyBehavior>
