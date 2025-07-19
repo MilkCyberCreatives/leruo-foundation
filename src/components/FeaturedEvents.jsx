@@ -19,7 +19,7 @@ const events = [
   {
     title: 'Women CEO\'s Network',
     description: 'Empowering women in leadership to build, lead and leave legacy.',
-    image: '/images/womenceos.jpg',
+    image: '/images/womenceos3.jpg',
     link: '/womenceo',
   },
 ];
