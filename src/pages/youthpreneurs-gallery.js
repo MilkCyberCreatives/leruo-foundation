@@ -1,6 +1,7 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import dynamic from 'next/dynamic';
+import Link from 'next/link';
+import { FaImages } from 'react-icons/fa';
 import TopBar from '@/components/TopBar';
 import MainHeader from '@/components/MainHeader';
 import FooterSection from '@/components/FooterSection';
@@ -9,7 +10,6 @@ export default function YouthpreneursGallery() {
   const [GLightbox, setGLightbox] = useState(null);
 
   useEffect(() => {
-    // Only run this on the client side
     import('glightbox').then((module) => {
       const lightbox = module.default({
         selector: '.glightbox',
@@ -27,8 +27,11 @@ export default function YouthpreneursGallery() {
     <>
       <TopBar />
       <MainHeader />
-      <section className="relative h-[30vh] bg-cover bg-center flex items-center justify-center text-white"
-        style={{ backgroundImage: "url('/images/about-hero.jpg')" }}>
+
+      <section
+        className="relative h-[30vh] bg-cover bg-center flex items-center justify-center text-white"
+        style={{ backgroundImage: "url('/images/about-hero.jpg')" }}
+      >
         <div className="absolute inset-0 bg-[#48101f] opacity-80 z-0" />
         <div className="relative z-10 text-center px-4">
           <h1 className="text-4xl md:text-5xl font-bold">Youthpreneurs Gallery</h1>
@@ -52,6 +55,17 @@ export default function YouthpreneursGallery() {
               />
             </a>
           ))}
+        </div>
+
+        {/* Button to View More */}
+        <div className="flex justify-center mt-10">
+          <Link
+            href="/gallerydrive"
+            className="inline-flex items-center px-6 py-3 bg-[#ffc107] text-[#48101f] font-semibold rounded-lg shadow hover:bg-white transition"
+          >
+            <FaImages className="mr-2" />
+            View More Pictures
+          </Link>
         </div>
       </section>
 
