@@ -7,6 +7,7 @@ import FooterSection from '../components/FooterSection';
 import YouthpreneursHero from '../components/YouthpreneursHero';
 import YouthpreneursIntro from '../components/YouthpreneursIntro';
 import YouthpreneursChallenges from '../components/YouthpreneursChallenges';
+import InvestorCTA from '@/components/InvestorCTA';
 import YouthpreneursIncubation from '../components/YouthpreneursIncubation';
 import SponsorshipSection from '../components/SponsorshipSection';
 
@@ -19,6 +20,7 @@ export default function YouthpreneursPage() {
         <YouthpreneursHero />
         <YouthpreneursIntro />
         <YouthpreneursChallenges />
+        <InvestorCTA />
         <YouthpreneursIncubation />
         <SponsorshipSection />
       </main>
