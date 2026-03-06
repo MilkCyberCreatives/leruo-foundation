@@ -1,5 +1,6 @@
 'use client';
 import React, { useState } from 'react';
+import Link from 'next/link';
 
 const challenges = [
   {
@@ -90,6 +91,8 @@ export default function YouthpreneursChallenges() {
           <img
             src="/images/youthpreneurs/challenges.jpg"
             alt="Empowering Youth"
+            loading="lazy"
+            decoding="async"
             className="rounded-xl mt-8 shadow-md"
           />
         </div>
@@ -138,9 +141,9 @@ export default function YouthpreneursChallenges() {
                   </svg>
                   <div>
                     <p className="font-bold text-[#48101f] text-lg">Collaboration is key to building strong entrepreneurial ecosystems. Let’s create a brighter, entrepreneurial future together!</p>
-                    <button className="mt-3 bg-[#48101f] hover:bg-[#3a0c19] text-white font-medium py-2 px-5 rounded-lg transition duration-200">
+                    <Link href="/becomesponsor" className="mt-3 inline-block bg-[#48101f] hover:bg-[#3a0c19] text-white font-medium py-2 px-5 rounded-lg transition duration-200">
                       Join the Movement
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>

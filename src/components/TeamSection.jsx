@@ -2,6 +2,7 @@
 import React from 'react';
 import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const teamMembers = [
   {
@@ -25,6 +26,8 @@ const teamMembers = [
 ];
 
 export default function TeamSection() {
+  const hasValidLink = (value) => Boolean(value && value !== '#');
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -78,16 +81,15 @@ export default function TeamSection() {
               whileHover="hover"
               className="group"
             >
-              <div className="overflow-hidden rounded-xl shadow-2xl transition-all duration-300 group-hover:shadow-lg">
-                <img
+              <div className="relative overflow-hidden rounded-xl shadow-2xl transition-all duration-300 group-hover:shadow-lg">
+                <Image
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-[320px] md:h-[360px] object-cover transition-transform duration-500 group-hover:scale-105"
-                  onError={(e) => {
-                    if (index === 3) {
-                      e.currentTarget.src = '/images/team/faith.jpg';
-                    }
-                  }}
+                  width={640}
+                  height={720}
+                  quality={72}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="h-[320px] w-full object-cover transition-transform duration-500 group-hover:scale-105 md:h-[360px]"
                 />
               </div>
 
@@ -98,23 +100,29 @@ export default function TeamSection() {
                 className="bg-white rounded-lg shadow-md px-4 py-4 text-center -mt-6 mx-2 relative z-20"
               >
                 <h3 className="text-lg font-semibold text-gray-800 mb-1">{member.name}</h3>
-                <p className="text-leruo text-sm font-medium mb-3">{member.role}</p>
-                <div className="flex justify-center gap-4">
-                  <a
-                    href={member.linkedin}
-                    className="text-gray-400 hover:text-leruo transition-colors duration-300"
-                    aria-label={`Connect with ${member.name} on LinkedIn`}
-                  >
-                    <FaLinkedinIn className="w-5 h-5" />
-                  </a>
-                  <a
-                    href={member.facebook}
-                    className="text-gray-400 hover:text-leruo transition-colors duration-300"
-                    aria-label={`Connect with ${member.name} on Facebook`}
-                  >
-                    <FaFacebookF className="w-5 h-5" />
-                  </a>
-                </div>
+                {member.role && <p className="text-leruo text-sm font-medium mb-3">{member.role}</p>}
+                {(hasValidLink(member.linkedin) || hasValidLink(member.facebook)) && (
+                  <div className="flex justify-center gap-4">
+                    {hasValidLink(member.linkedin) && (
+                      <a
+                        href={member.linkedin}
+                        className="text-gray-400 hover:text-leruo transition-colors duration-300"
+                        aria-label={`Connect with ${member.name} on LinkedIn`}
+                      >
+                        <FaLinkedinIn className="w-5 h-5" />
+                      </a>
+                    )}
+                    {hasValidLink(member.facebook) && (
+                      <a
+                        href={member.facebook}
+                        className="text-gray-400 hover:text-leruo transition-colors duration-300"
+                        aria-label={`Connect with ${member.name} on Facebook`}
+                      >
+                        <FaFacebookF className="w-5 h-5" />
+                      </a>
+                    )}
+                  </div>
+                )}
               </motion.div>
             </motion.div>
           ))}

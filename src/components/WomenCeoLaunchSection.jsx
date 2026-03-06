@@ -12,6 +12,8 @@ export default function WomenCeoLaunchSection() {
             <img
               src="/images/womenceos/women-network.jpg"
               alt="Women CEOs Network"
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover"
             />
           </div>

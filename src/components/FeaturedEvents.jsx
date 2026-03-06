@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaFacebookF, FaLinkedinIn, FaTwitter, FaWhatsapp } from 'react-icons/fa';
+import Image from 'next/image';
 import Link from 'next/link';
 
 const events = [
@@ -58,11 +59,14 @@ export default function FeaturedEvents() {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
             >
-              <div className="h-64 overflow-hidden">
-                <img
+              <div className="relative h-64 overflow-hidden">
+                <Image
                   src={event.image}
                   alt={event.title}
-                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                  fill
+                  quality={72}
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover transition-transform duration-500 hover:scale-105"
                 />
               </div>
 

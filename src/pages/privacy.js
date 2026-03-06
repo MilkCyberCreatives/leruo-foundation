@@ -1,11 +1,11 @@
-export default function Youthpreneurs2025Redirect() {
+export default function PrivacyRedirect() {
   return null;
 }
 
 export async function getServerSideProps() {
   return {
     redirect: {
-      destination: '/youthpreneurs',
+      destination: '/bankingdetails',
       permanent: false,
     },
   };

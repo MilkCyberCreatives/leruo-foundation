@@ -1,5 +1,6 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { FaImages } from 'react-icons/fa';
 import TopBar from '@/components/TopBar';
@@ -7,15 +8,26 @@ import MainHeader from '@/components/MainHeader';
 import FooterSection from '@/components/FooterSection';
 
 export default function YouthpreneursGallery() {
-  const [GLightbox, setGLightbox] = useState(null);
-
   useEffect(() => {
+    let lightbox;
+    let mounted = true;
+
     import('glightbox').then((module) => {
-      const lightbox = module.default({
+      if (!mounted) {
+        return;
+      }
+
+      lightbox = module.default({
         selector: '.glightbox',
       });
-      setGLightbox(lightbox);
     });
+
+    return () => {
+      mounted = false;
+      if (lightbox) {
+        lightbox.destroy();
+      }
+    };
   }, []);
 
   const imageList = Array.from({ length: 12 }, (_, i) => ({
@@ -45,13 +57,16 @@ export default function YouthpreneursGallery() {
             <a
               key={index}
               href={image.src}
-              className="glightbox block overflow-hidden rounded shadow hover:scale-105 transition"
+              className="glightbox relative block h-64 overflow-hidden rounded shadow transition hover:scale-105"
               data-gallery="youthpreneurs-gallery"
             >
-              <img
+              <Image
                 src={image.src}
                 alt={image.alt}
-                className="w-full h-64 object-cover"
+                fill
+                quality={70}
+                sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+                className="object-cover"
               />
             </a>
           ))}

@@ -12,7 +12,7 @@ const InvestorCTA = () => {
           alt="Call for Changemakers"
           fill
           sizes="100vw"
-          priority
+          quality={72}
           className="object-cover object-center"
         />
         {/* ✅ Overlay for contrast */}

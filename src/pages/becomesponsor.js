@@ -57,10 +57,10 @@ export default function BecomeSponsorPage() {
                   Your partnership will expand that impact and help us reach even more aspiring entrepreneurs.
                 </p>
               </div>
-              <button className="mt-8 flex items-center text-[#48101f] font-semibold group">
+              <Link href="/about" className="mt-8 inline-flex items-center text-[#48101f] font-semibold group">
                 Learn more about our impact
                 <FaArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -140,13 +140,12 @@ export default function BecomeSponsorPage() {
               </div>
 
               {/* ✅ Fixed for deployment */}
-              <Link href="/sponsorshippackages" legacyBehavior>
-                <a className="block mt-8 w-full">
-                  <button className="w-full bg-[#ffc107] text-[#48101f] py-3 rounded-lg font-semibold flex items-center justify-center group hover:bg-white transition">
-                    Explore Events Sponsorship Packages
-                    <FaArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
-                  </button>
-                </a>
+              <Link
+                href="/sponsorshippackages"
+                className="group mt-8 flex w-full items-center justify-center rounded-lg bg-[#ffc107] py-3 font-semibold text-[#48101f] transition hover:bg-white"
+              >
+                Explore Events Sponsorship Packages
+                <FaArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
               </Link>
             </div>
           </div>

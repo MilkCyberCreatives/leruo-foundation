@@ -13,8 +13,7 @@ export default function CTABanner() {
           src="/images/cta/banner.jpg"
           alt="Empowered community"
           fill
-          priority
-          quality={100}
+          quality={72}
           className="object-cover object-center"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
         />

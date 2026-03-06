@@ -1,10 +1,8 @@
 export default function HeroBanner() {
-  // Cloudinary-hosted video URL
-  const videoUrl = "https://res.cloudinary.com/dpkqxcdlv/video/upload/v1752740523/hero_fi1w4g.mp4";
+  const videoUrl = 'https://res.cloudinary.com/dpkqxcdlv/video/upload/q_auto:eco,w_1280,c_limit/v1752740523/hero_fi1w4g.mp4';
 
   return (
     <section className="relative w-full h-screen overflow-hidden">
-      {/* Background Video - Cloudinary */}
       <video
         src={videoUrl}
         className="absolute top-0 left-0 w-full h-full object-cover"
@@ -12,6 +10,7 @@ export default function HeroBanner() {
         muted
         loop
         playsInline
+        preload="metadata"
       />
 
       {/* Overlay */}

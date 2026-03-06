@@ -27,6 +27,8 @@ export default function AboutSection() {
               <motion.img
                 src="/images/about-1.jpg"
                 alt="Empowerment"
+                loading="lazy"
+                decoding="async"
                 className="rounded-xl object-cover w-full h-full transform rotate-3 border-4 border-white shadow-lg"
                 whileHover={{ rotate: 0, scale: 1.05 }}
                 transition={{ duration: 0.3 }}
@@ -36,6 +38,8 @@ export default function AboutSection() {
               <motion.img
                 src="/images/about-2.jpg"
                 alt="Mentorship"
+                loading="lazy"
+                decoding="async"
                 className="rounded-xl object-cover w-full h-full transform -rotate-2 border-4 border-white shadow-lg"
                 whileHover={{ rotate: 0, scale: 1.05 }}
                 transition={{ duration: 0.3 }}
@@ -45,6 +49,8 @@ export default function AboutSection() {
               <motion.img
                 src="/images/about-3.jpg"
                 alt="Training"
+                loading="lazy"
+                decoding="async"
                 className="rounded-xl object-cover w-full h-full transform rotate-1 border-4 border-white shadow-lg"
                 whileHover={{ rotate: 0, scale: 1.05 }}
                 transition={{ duration: 0.3 }}
@@ -54,6 +60,8 @@ export default function AboutSection() {
               <motion.img
                 src="/images/about-4.jpg"
                 alt="Leadership"
+                loading="lazy"
+                decoding="async"
                 className="rounded-xl object-cover w-full h-full transform -rotate-1 border-4 border-white shadow-lg"
                 whileHover={{ rotate: 0, scale: 1.05 }}
                 transition={{ duration: 0.3 }}
@@ -142,6 +150,8 @@ export default function AboutSection() {
           <img
             src="/images/about-1.jpg"
             alt="About Mobile"
+            loading="lazy"
+            decoding="async"
             className="rounded-xl w-full h-64 object-cover shadow-md"
           />
         </motion.div>

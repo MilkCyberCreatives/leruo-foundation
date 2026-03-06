@@ -10,6 +10,8 @@ export default function EventGalleryCards() {
           <img
             src="/images/youthpreneurs/yp5.jpg"
             alt="Youthpreneurs 2025"
+            loading="lazy"
+            decoding="async"
             className="w-full h-56 object-cover rounded-t-lg"
           />
           <div className="p-6">

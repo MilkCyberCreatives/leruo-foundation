@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import Link from 'next/link';
 
 export default function SponsorshipSection() {
   return (
@@ -116,18 +117,18 @@ export default function SponsorshipSection() {
               </div>
             </div>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <a
-                href="contact"
+              <Link
+                href="/contact"
                 className="bg-[#48101f] hover:bg-[#3a0c19] text-white font-medium px-6 py-3 rounded-lg text-center transition-colors"
               >
                 Discuss Partnership Opportunities
-              </a>
-              <a
-                href="bankingdetails"
+              </Link>
+              <Link
+                href="/bankingdetails"
                 className="border-2 border-[#48101f] text-[#48101f] hover:bg-[#48101f] hover:text-white font-medium px-6 py-3 rounded-lg text-center transition-colors"
               >
                 Make a Donation
-              </a>
+              </Link>
             </div>
           </div>
         </div>
