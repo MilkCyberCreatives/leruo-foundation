@@ -136,6 +136,17 @@ export const pageSeo = {
     priority: '0.6',
     changeFrequency: 'monthly',
   },
+  '/privacy': {
+    title: 'Privacy and POPIA',
+    description:
+      'Read how the Leruo Foundation website handles contact information, donations, external services and privacy enquiries in line with responsible information practices.',
+    image: '/images/about-hero.jpg',
+    keywords: ['Leruo Foundation privacy', 'Leruo Foundation POPIA', 'privacy South Africa'],
+    label: 'Privacy and POPIA',
+    pageType: 'WebPage',
+    priority: '0.5',
+    changeFrequency: 'yearly',
+  },
   '/sponsorshippackages': {
     title: 'Sponsorship Packages',
     description:
