@@ -169,6 +169,28 @@ export const pageSeo = {
     priority: '0.9',
     changeFrequency: 'monthly',
   },
+  '/graduation-2026': {
+    title: 'Changemakers Incubation Programme Graduation Ceremony 2026',
+    description:
+      'View the official digital programme and menu for the Leruo Foundation Changemakers Incubation Programme Graduation Ceremony on Saturday, 29 August 2026 at Hoyo Hoyo Chartwell.',
+    image: '/images/youthpreneurs.jpg',
+    keywords: [
+      'Leruo Foundation graduation 2026',
+      'Changemakers Incubation Programme',
+      'Youthpreneurs graduation',
+      'Hoyo Hoyo Chartwell',
+      'Leruo Foundation digital programme',
+    ],
+    label: 'Changemakers Graduation 2026',
+    pageType: 'WebPage',
+    priority: '1.0',
+    changeFrequency: 'weekly',
+    event: {
+      name: 'Leruo Foundation Changemakers Incubation Programme Graduation Ceremony',
+      startDate: '2026-08-29T11:00:00+02:00',
+      locationName: 'Hoyo Hoyo Chartwell',
+    },
+  },
   '/youthpreneurs-gallery': {
     title: 'Youthpreneurs Gallery',
     description:
@@ -227,6 +249,7 @@ export const getPageSeo = (pathname = '/') => {
     noindex: page.noindex || !isKnownPage,
     priority: page.priority || '0.6',
     changeFrequency: page.changeFrequency || 'monthly',
+    event: page.event || null,
   };
 };
 
@@ -330,7 +353,35 @@ export const buildStructuredData = (pathname = '/') => {
         }
       : null;
 
-  return [organizationSchema, pathname === '/' ? websiteSchema : null, pageSchema, breadcrumbSchema].filter(Boolean);
+  const eventSchema = seo.event
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'Event',
+        '@id': `${pageUrl}#event`,
+        name: seo.event.name || seo.title,
+        description: seo.description,
+        startDate: seo.event.startDate,
+        eventStatus: 'https://schema.org/EventScheduled',
+        eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+        url: pageUrl,
+        image: [seo.image],
+        location: {
+          '@type': 'Place',
+          name: seo.event.locationName,
+        },
+        organizer: {
+          '@id': organizationId,
+        },
+      }
+    : null;
+
+  return [
+    organizationSchema,
+    pathname === '/' ? websiteSchema : null,
+    pageSchema,
+    breadcrumbSchema,
+    eventSchema,
+  ].filter(Boolean);
 };
 
 export const getSitemapEntries = () =>
