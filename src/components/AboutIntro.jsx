@@ -107,6 +107,8 @@ export default function AboutIntro() {
                   <img
                     src={`/images/${img.src}`}
                     alt={`Gallery ${i + 1}`}
+                    loading="lazy"
+                    decoding="async"
                     className="rounded-xl object-cover w-full h-full border-4 border-white shadow-lg"
                   />
                 </motion.div>
