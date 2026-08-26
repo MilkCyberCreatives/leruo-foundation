@@ -144,7 +144,7 @@ const menuItems = [
       {
         name: 'Peppermint Crisp Tart',
         description: [
-          'Tennis biscuit with caramel treat heavy cream with chocolate mint flavor',
+          'Tennis biscuit with caramel treat heavey cream with chocolate mint flavor',
         ],
       },
     ],
