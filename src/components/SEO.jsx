@@ -6,7 +6,7 @@ export default function SEO({ pathname = '/' }) {
   const pageUrl = seo.path === '/' ? siteConfig.siteUrl : `${siteConfig.siteUrl}${seo.path}`;
   const structuredData = buildStructuredData(pathname);
   const robotsContent = seo.noindex
-    ? 'noindex,nofollow,max-image-preview:large,max-snippet:-1,max-video-preview:-1'
+    ? 'noindex,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1'
     : 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1';
 
   const verificationTags = [
