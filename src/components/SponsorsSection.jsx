@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 export default function SponsorsSection() {
@@ -51,12 +52,12 @@ export default function SponsorsSection() {
           viewport={{ once: true }}
           className="mt-10 text-center"
         >
-          <a
+          <Link
             href="/contact"
             className="inline-block px-7 py-2.5 rounded-full bg-leruo text-white font-medium hover:bg-leruo-dark transition-all duration-300 hover:shadow-sm"
           >
             Become a Sponsor
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>

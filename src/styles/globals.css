@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "glightbox/dist/css/glightbox.min.css";
 
 :root {
   --background: #ffffff;

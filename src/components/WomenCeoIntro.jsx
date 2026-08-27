@@ -28,6 +28,7 @@ export default function WomenCeoIntro() {
               className="absolute top-0 left-0 w-full h-full"
               src="https://www.youtube.com/embed/dEWtSCfTUH0?start=3&autoplay=0&mute=0"
               title="Women CEOs' Network Video"
+              loading="lazy"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen

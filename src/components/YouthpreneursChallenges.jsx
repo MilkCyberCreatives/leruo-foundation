@@ -59,6 +59,8 @@ export default function YouthpreneursChallenges() {
                 >
                   <button
                     onClick={() => toggleAccordion(index)}
+                    aria-expanded={openIndex === index}
+                    aria-controls={`youthpreneur-challenge-${index}`}
                     className={`w-full flex justify-between items-center px-5 py-4 text-left ${
                       openIndex === index ? 'bg-[#f9f2f1] text-[#48101f]' : 'hover:bg-gray-50 text-gray-800'
                     } transition-colors`}
@@ -78,7 +80,11 @@ export default function YouthpreneursChallenges() {
                     </svg>
                   </button>
                   {openIndex === index && (
-                    <div className="px-5 pb-5 pt-1 text-gray-700 text-sm md:text-base leading-relaxed">
+                    <div
+                      id={`youthpreneur-challenge-${index}`}
+                      role="region"
+                      className="px-5 pb-5 pt-1 text-gray-700 text-sm md:text-base leading-relaxed"
+                    >
                       {item.content}
                     </div>
                   )}

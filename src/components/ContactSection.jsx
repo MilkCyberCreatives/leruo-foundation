@@ -121,6 +121,8 @@ export default function ContactSection() {
                 value={formData.name}
                 onChange={handleChange}
                 placeholder="Full Name"
+                autoComplete="name"
+                aria-label="Full Name"
                 required
                 className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-[#48101f]"
               />
@@ -131,6 +133,8 @@ export default function ContactSection() {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="Email Address"
+                autoComplete="email"
+                aria-label="Email Address"
                 required
                 className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-[#48101f]"
               />
@@ -141,6 +145,7 @@ export default function ContactSection() {
                 value={formData.subject}
                 onChange={handleChange}
                 placeholder="Subject"
+                aria-label="Subject"
                 required
                 className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-[#48101f]"
               />
@@ -151,15 +156,17 @@ export default function ContactSection() {
                 onChange={handleChange}
                 rows="5"
                 placeholder="Your Message"
+                aria-label="Your Message"
                 required
                 className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-[#48101f]"
               ></textarea>
 
-              {error && <div className="text-red-600">{error}</div>}
+              {error && <div className="text-red-600" role="alert" aria-live="polite">{error}</div>}
 
               <button
                 type="submit"
                 disabled={isSubmitting}
+                aria-busy={isSubmitting}
                 className="w-full bg-[#48101f] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#3a0c19] transition-colors"
               >
                 {isSubmitting ? 'Sending...' : (
@@ -171,7 +178,7 @@ export default function ContactSection() {
               </button>
 
               {submitSuccess && (
-                <div className="bg-green-100 text-green-700 px-4 py-3 rounded-lg mt-4">
+                <div className="bg-green-100 text-green-700 px-4 py-3 rounded-lg mt-4" role="status" aria-live="polite">
                   ✅ Your message has been sent successfully!
                 </div>
               )}

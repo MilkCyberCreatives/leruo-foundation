@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import Link from 'next/link';
 import { FaFacebookF, FaLinkedinIn, FaArrowUp, FaYoutube } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 
@@ -26,10 +27,10 @@ export default function FooterSection() {
         <div className="space-y-4">
           <h4 className="text-xl font-semibold mb-4 border-b border-white/20 pb-2 inline-block">Navigation</h4>
           <ul className="space-y-3">
-            <li><a href="/" className="text-sm hover:text-white/90 hover:underline transition-all">Home</a></li>
-            <li><a href="/about" className="text-sm hover:text-white/90 hover:underline transition-all">About Us</a></li>
-            <li><a href="/contact" className="text-sm hover:text-white/90 hover:underline transition-all">Contact</a></li>
-            <li><a href="/graduation-2026" className="text-sm hover:text-white/90 hover:underline transition-all">Graduation 2026</a></li>
+            <li><Link href="/" className="text-sm hover:text-white/90 hover:underline transition-all">Home</Link></li>
+            <li><Link href="/about" className="text-sm hover:text-white/90 hover:underline transition-all">About Us</Link></li>
+            <li><Link href="/contact" className="text-sm hover:text-white/90 hover:underline transition-all">Contact</Link></li>
+            <li><Link href="/graduation-2026" className="text-sm hover:text-white/90 hover:underline transition-all">Graduation 2026</Link></li>
           </ul>
         </div>
 
@@ -37,9 +38,9 @@ export default function FooterSection() {
         <div className="space-y-4">
           <h4 className="text-xl font-semibold mb-4 border-b border-white/20 pb-2 inline-block">Quick Links</h4>
           <ul className="space-y-3">
-            <li><a href="/privacy" className="text-sm hover:text-white/90 hover:underline transition-all">Privacy Policy</a></li>
-            <li><a href="/privacy#popia" className="text-sm hover:text-white/90 hover:underline transition-all">POPIA Policy</a></li>
-            <li><a href="/becomesponsor" className="text-sm hover:text-white/90 hover:underline transition-all">Get Involved</a></li>
+            <li><Link href="/privacy" className="text-sm hover:text-white/90 hover:underline transition-all">Privacy Policy</Link></li>
+            <li><Link href="/privacy#popia" className="text-sm hover:text-white/90 hover:underline transition-all">POPIA Policy</Link></li>
+            <li><Link href="/becomesponsor" className="text-sm hover:text-white/90 hover:underline transition-all">Get Involved</Link></li>
           </ul>
         </div>
 
@@ -57,16 +58,18 @@ export default function FooterSection() {
       <div className="border-t border-white/20 mt-12 pt-8 px-6 max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex flex-col sm:flex-row items-center gap-4">
-            <a href="/">
+            <Link href="/" aria-label="Leruo Foundation home">
               <img 
                 src="/images/footer/footer.png" 
                 alt="Leruo Logo" 
+                loading="lazy"
+                decoding="async"
                 className="h-8 w-auto filter brightness-0 invert hover:opacity-90 transition-opacity"
               />
-            </a>
+            </Link>
             <p className="text-sm text-white/80">
               &copy; {new Date().getFullYear()} All Rights Reserved by{' '}
-              <a href="/" className="font-medium text-white hover:underline">Leruo Foundation</a>
+              <Link href="/" className="font-medium text-white hover:underline">Leruo Foundation</Link>
             </p>
           </div>
           
@@ -85,10 +88,10 @@ export default function FooterSection() {
             
             <div className="flex gap-5">
               {[
-                { icon: <FaFacebookF size={16} />, url: 'https://www.facebook.com/profile.php?id=61574829148161' },
-                { icon: <FaLinkedinIn size={16} />, url: 'https://www.linkedin.com/company/leruo-foundation' },
-                { icon: <FaXTwitter size={16} />, url: 'https://x.com/LeruoFoundation' },
-                { icon: <FaYoutube size={16} />, url: 'https://www.youtube.com/@LeruoFoundationNPO' }
+                { icon: <FaFacebookF size={16} />, url: 'https://www.facebook.com/profile.php?id=61574829148161', label: 'Facebook' },
+                { icon: <FaLinkedinIn size={16} />, url: 'https://www.linkedin.com/company/leruo-foundation', label: 'LinkedIn' },
+                { icon: <FaXTwitter size={16} />, url: 'https://x.com/LeruoFoundation', label: 'X' },
+                { icon: <FaYoutube size={16} />, url: 'https://www.youtube.com/@LeruoFoundationNPO', label: 'YouTube' }
               ].map((social, index) => (
                 <a
                   key={index}
@@ -96,7 +99,7 @@ export default function FooterSection() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white/70 hover:text-white transition-colors"
-                  aria-label={`Social media link`}
+                  aria-label={social.label}
                 >
                   {social.icon}
                 </a>

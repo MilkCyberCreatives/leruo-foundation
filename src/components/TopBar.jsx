@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import Link from 'next/link';
 import { FaFacebookF, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 
@@ -11,12 +12,12 @@ export default function TopBar() {
         <div className="text-center md:text-left">
           <span className="whitespace-nowrap">
             Fund The Future,
-            <a
+            <Link
               href="/bankingdetails"
               className="ml-2 underline text-yellow-300 hover:text-yellow-400 transition-colors"
             >
               Donate Now!
-            </a>
+            </Link>
           </span>
         </div>
 

@@ -133,6 +133,7 @@ export const pageSeo = {
     keywords: ['Youthpreneurs gallery', 'entrepreneurship event photos', 'Leruo Foundation images'],
     label: 'Full Youthpreneurs Gallery',
     pageType: 'CollectionPage',
+    noindex: true,
     priority: '0.6',
     changeFrequency: 'monthly',
   },
@@ -302,6 +303,11 @@ export const buildStructuredData = (pathname = '/') => {
       '@type': 'Country',
       name: 'South Africa',
     },
+    identifier: {
+      '@type': 'PropertyValue',
+      propertyID: 'NPO Registration Number',
+      value: '318-720 NPO',
+    },
     address: {
       '@type': 'PostalAddress',
       ...siteConfig.address,
@@ -348,6 +354,13 @@ export const buildStructuredData = (pathname = '/') => {
       '@type': 'ImageObject',
       url: seo.image,
     },
+    ...(seo.event
+      ? {
+          mainEntity: {
+            '@id': `${pageUrl}#event`,
+          },
+        }
+      : {}),
   };
 
   const breadcrumbSchema =
@@ -388,7 +401,7 @@ export const buildStructuredData = (pathname = '/') => {
 
   return [
     organizationSchema,
-    pathname === '/' ? websiteSchema : null,
+    websiteSchema,
     pageSchema,
     breadcrumbSchema,
     eventSchema,

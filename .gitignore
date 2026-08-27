@@ -39,13 +39,5 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 public/videos/hero.mp4
-=======
->>>>>>> 7e1e9c6 (Initial commit)
-=======
-
-public/videos/hero.mp4
->>>>>>> 4d0ac4c (git commit -m "Remove large video and prevent tracking")

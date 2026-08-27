@@ -215,17 +215,19 @@ export default function BecomeSponsorPage() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/bankingdetails" legacyBehavior>
-              <a className="bg-[#48101f] text-white px-8 py-4 rounded-full font-semibold shadow hover:bg-[#5a1a2b] transition flex items-center justify-center group">
-                Partner With Us
-                <FaArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
-              </a>
+            <Link
+              href="/bankingdetails"
+              className="bg-[#48101f] text-white px-8 py-4 rounded-full font-semibold shadow hover:bg-[#5a1a2b] transition flex items-center justify-center group"
+            >
+              Partner With Us
+              <FaArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
             </Link>
-            <Link href="/contact" legacyBehavior>
-              <a className="bg-white text-[#48101f] px-8 py-4 rounded-full font-semibold shadow hover:bg-gray-50 transition flex items-center justify-center group border border-[#f0e6e6]">
-                Contact Our Team
-                <FaArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
-              </a>
+            <Link
+              href="/contact"
+              className="bg-white text-[#48101f] px-8 py-4 rounded-full font-semibold shadow hover:bg-gray-50 transition flex items-center justify-center group border border-[#f0e6e6]"
+            >
+              Contact Our Team
+              <FaArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
         </div>
