@@ -25,6 +25,9 @@ export default function GalleryDrive() {
         <div className="w-full h-[80vh] shadow-lg rounded-xl overflow-hidden border border-gray-200">
           <iframe
             src="https://drive.google.com/embeddedfolderview?id=1kitpj8MPVKJxSY0OsFXVzFy3vyOyHBBd#grid"
+            title="Full Youthpreneurs event photo gallery"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
             className="w-full h-full"
             style={{
               border: 'none',

@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function EventGalleryCards() {
   return (
@@ -7,11 +8,13 @@ export default function EventGalleryCards() {
       <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-10">
         {/* Youthpreneurs Card */}
         <div className="bg-white border border-[#48101f] rounded-lg shadow hover:shadow-lg transition">
-          <img
+          <Image
             src="/images/youthpreneurs/yp5.jpg"
             alt="Youthpreneurs 2025"
-            loading="lazy"
-            decoding="async"
+            width={900}
+            height={600}
+            quality={72}
+            sizes="(max-width: 768px) 100vw, 33vw"
             className="w-full h-56 object-cover rounded-t-lg"
           />
           <div className="p-6">

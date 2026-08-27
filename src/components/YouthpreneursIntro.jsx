@@ -38,6 +38,7 @@ export default function YouthpreneursIntro() {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 title="Youthpreneurs Program Video"
+              loading="lazy"
               ></iframe>
             </div>
           </div>

@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 export default function AboutIntro() {
   const container = {
@@ -104,12 +105,13 @@ export default function AboutIntro() {
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <img
+                  <Image
                     src={`/images/${img.src}`}
                     alt={`Gallery ${i + 1}`}
-                    loading="lazy"
-                    decoding="async"
-                    className="rounded-xl object-cover w-full h-full border-4 border-white shadow-lg"
+                    fill
+                    quality={72}
+                    sizes="(max-width: 1024px) 42vw, 220px"
+                    className="rounded-xl object-cover border-4 border-white shadow-lg"
                   />
                 </motion.div>
               ))}
