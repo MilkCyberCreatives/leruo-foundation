@@ -5,13 +5,11 @@ export default function SitemapXml() {
 }
 
 export async function getServerSideProps({ res }) {
-  const lastModified = new Date().toISOString();
   const urls = getSitemapEntries()
     .map(
       (entry) => `
   <url>
     <loc>${absoluteUrl(entry.pathname)}</loc>
-    <lastmod>${lastModified}</lastmod>
     <changefreq>${entry.changeFrequency}</changefreq>
     <priority>${entry.priority}</priority>
   </url>`
@@ -23,7 +21,9 @@ export async function getServerSideProps({ res }) {
 ${urls}
 </urlset>`;
 
-  res.setHeader('Content-Type', 'application/xml');
+  res.setHeader('Content-Type', 'application/xml; charset=utf-8');
+  res.setHeader('Cache-Control', 'public, s-maxage=86400, stale-while-revalidate=604800');
+  res.setHeader('X-Robots-Tag', 'noindex, follow');
   res.write(body);
   res.end();
 

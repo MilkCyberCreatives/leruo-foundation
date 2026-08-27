@@ -29,6 +29,7 @@ export default function FooterSection() {
             <li><a href="/" className="text-sm hover:text-white/90 hover:underline transition-all">Home</a></li>
             <li><a href="/about" className="text-sm hover:text-white/90 hover:underline transition-all">About Us</a></li>
             <li><a href="/contact" className="text-sm hover:text-white/90 hover:underline transition-all">Contact</a></li>
+            <li><a href="/graduation-2026" className="text-sm hover:text-white/90 hover:underline transition-all">Graduation 2026</a></li>
           </ul>
         </div>
 
@@ -37,7 +38,7 @@ export default function FooterSection() {
           <h4 className="text-xl font-semibold mb-4 border-b border-white/20 pb-2 inline-block">Quick Links</h4>
           <ul className="space-y-3">
             <li><a href="/privacy" className="text-sm hover:text-white/90 hover:underline transition-all">Privacy Policy</a></li>
-            <li><a href="/bankingdetails" className="text-sm hover:text-white/90 hover:underline transition-all">POPIA Policy</a></li>
+            <li><a href="/privacy#popia" className="text-sm hover:text-white/90 hover:underline transition-all">POPIA Policy</a></li>
             <li><a href="/becomesponsor" className="text-sm hover:text-white/90 hover:underline transition-all">Get Involved</a></li>
           </ul>
         </div>

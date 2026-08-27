@@ -5,9 +5,6 @@ import Link from 'next/link';
 export default function AboutSection() {
   return (
     <section className="relative bg-white py-16 lg:py-24 overflow-hidden">
-      {/* Subtle background pattern */}
-      <div className="absolute inset-0 bg-[url('/images/abstract-bg.png')] bg-cover bg-center opacity-5 pointer-events-none"></div>
-
       {/* Container with perfect column alignment */}
       <div className="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 lg:gap-16 items-stretch">
         {/* 📸 Left: Image Collage with refined positioning */}

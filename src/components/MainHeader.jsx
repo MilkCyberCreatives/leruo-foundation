@@ -67,6 +67,12 @@ export default function MainHeader() {
                       Youthpreneurs
                     </Link>
                     <Link 
+                      href="/graduation-2026" 
+                      className="block px-4 py-2 text-[#48101f] hover:bg-[#f8f9fa] transition-colors"
+                    >
+                      Changemakers Graduation 2026
+                    </Link>
+                    <Link 
                       href="/womenceo" 
                       className="block px-4 py-2 text-[#48101f] hover:bg-[#f8f9fa] transition-colors"
                     >
@@ -154,6 +160,13 @@ export default function MainHeader() {
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Youthpreneurs
+                  </Link>
+                  <Link
+                    href="/graduation-2026"
+                    className="block px-3 py-2 rounded-md text-[#48101f] hover:bg-gray-50"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Changemakers Graduation 2026
                   </Link>
                   <Link
                     href="/womenceo"

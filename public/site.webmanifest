@@ -1,0 +1,18 @@
+{
+  "name": "Leruo Foundation",
+  "short_name": "Leruo",
+  "description": "Empowering youthpreneurs, women leaders and small business owners through entrepreneurship, mentorship and leadership development.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#48101f",
+  "lang": "en-ZA",
+  "icons": [
+    {
+      "src": "/images/leruofoundationicon.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
