@@ -53,3 +53,7 @@ Optional public variables used by the SEO layer:
 - `NEXT_PUBLIC_FACEBOOK_DOMAIN_VERIFICATION`
 
 Do not commit secrets to the repository.
+
+## Production deployment
+
+Production is deployed from the `main` branch through the connected Vercel project.
