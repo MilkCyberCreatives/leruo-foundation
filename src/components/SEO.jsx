@@ -20,19 +20,12 @@ export default function SEO({ pathname = '/' }) {
     <Head>
       <title>{seo.metaTitle}</title>
       <meta name="description" content={seo.description} key="description" />
-      <meta name="keywords" content={seo.keywords.join(', ')} key="keywords" />
       <meta name="author" content={siteConfig.organizationName} key="author" />
       <meta name="creator" content={siteConfig.organizationName} key="creator" />
       <meta name="publisher" content={siteConfig.organizationName} key="publisher" />
       <meta name="robots" content={robotsContent} key="robots" />
       <meta name="googlebot" content={robotsContent} key="googlebot" />
-      <meta name="geo.region" content={siteConfig.geo.region} key="geo.region" />
-      <meta name="geo.placename" content={siteConfig.geo.placename} key="geo.placename" />
-      <meta name="geo.position" content={`${siteConfig.geo.latitude};${siteConfig.geo.longitude}`} key="geo.position" />
-      <meta name="ICBM" content={`${siteConfig.geo.latitude}, ${siteConfig.geo.longitude}`} key="ICBM" />
       <link rel="canonical" href={pageUrl} key="canonical" />
-      <link rel="alternate" hrefLang="en-ZA" href={pageUrl} key="alternate-en-za" />
-      <link rel="alternate" hrefLang="x-default" href={pageUrl} key="alternate-x-default" />
 
       <meta property="og:locale" content={siteConfig.locale} key="og:locale" />
       <meta property="og:type" content={seo.ogType} key="og:type" />

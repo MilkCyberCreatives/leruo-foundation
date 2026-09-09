@@ -7,16 +7,16 @@ export default function WomenCeoIntro() {
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         {/* Left: Text */}
         <div className="order-1 md:order-none">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#48101f] mb-6">Women CEOs' Network</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-[#48101f] mb-6">Women CEOs&apos; Network</h2>
           <div className="space-y-4 text-gray-700 leading-relaxed">
             <p>
-              The Women CEOs' Network takes place in August to coincide with Women's Month. The event is designed to bring together powerful, inspiring, and visionary women who lead successful businesses across various industries.
+              The Women CEOs&apos; Network takes place in August to coincide with Women&apos;s Month. The event is designed to bring together powerful, inspiring, and visionary women who lead successful businesses across various industries.
             </p>
             <p>
               This intimate gathering offers a unique opportunity for women at the helm of companies to share insights, exchange ideas, and form meaningful connections in a relaxed, yet productive environment.
             </p>
             <p>
-              This event is an empowering, high-impact gathering where women CEOs can recharge, share wisdom, and collaborate. Whether you're looking for new business insights, growth opportunities, or simply seeking inspiration from other top women in business, the Women CEOs' Network offers an unmatched opportunity to connect with and learn from the best in the industry.
+              This event is an empowering, high-impact gathering where women CEOs can recharge, share wisdom, and collaborate. Whether you&apos;re looking for new business insights, growth opportunities, or simply seeking inspiration from other top women in business, the Women CEOs&apos; Network offers an unmatched opportunity to connect with and learn from the best in the industry.
             </p>
           </div>
         </div>

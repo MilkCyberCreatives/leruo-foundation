@@ -47,11 +47,11 @@ export default function BrandingCircleWhyJoin() {
               <h3 className="text-2xl font-semibold text-[#48101f]">Ready to Elevate Your Brand?</h3>
               <div className="space-y-4">
                 <div className="bg-[#f8f1f3] p-4 rounded-lg border-l-4 border-[#48101f]">
-                  <p className="text-gray-700 italic">"The Branding Circle transformed how we approach our market positioning."</p>
+                  <p className="text-gray-700 italic">&quot;The Branding Circle transformed how we approach our market positioning.&quot;</p>
                   <p className="text-sm text-[#48101f] mt-2">- Current Member</p>
                 </div>
                 <p className="text-gray-700 leading-relaxed">
-                  Join South Africa's premier community for branding executives and embark on a transformative professional journey.
+                  Join South Africa&apos;s premier community for branding executives and embark on a transformative professional journey.
                 </p>
               </div>
             </div>
