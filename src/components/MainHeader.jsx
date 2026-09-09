@@ -76,7 +76,7 @@ export default function MainHeader() {
                       href="/womenceo" 
                       className="block px-4 py-2 text-[#48101f] hover:bg-[#f8f9fa] transition-colors"
                     >
-                      Women CEO's Network
+                      Women CEO&apos;s Network
                     </Link>
                   </div>
                 )}
@@ -173,7 +173,7 @@ export default function MainHeader() {
                     className="block px-3 py-2 rounded-md text-[#48101f] hover:bg-gray-50"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    Women CEO's Network
+                    Women CEO&apos;s Network
                   </Link>
                 </div>
               )}
