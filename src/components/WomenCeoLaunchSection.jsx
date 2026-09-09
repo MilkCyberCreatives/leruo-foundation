@@ -23,10 +23,10 @@ export default function WomenCeoLaunchSection() {
         <div className="h-full flex flex-col justify-between">
           <div>
             <h2 className="text-3xl font-bold text-[#48101f] mb-4">
-              Women CEOs' Breakfast Network Launch
+              Women CEOs&apos; Breakfast Network Launch
             </h2>
             <p className="text-gray-700 mb-4">
-              Leruo Foundation proudly announces the launch of the Women CEOs' Network. This exclusive initiative is designed to bring together powerful, inspiring, and visionary women who lead successful businesses across various industries who are leading established businesses with a minimum of two years in operation and at least five permanent employees. Whether you're looking for new business insights, growth opportunities, or simply seeking inspiration from other top women in business, the Women CEOs' Network offers an unmatched opportunity to connect with and learn from the best in the industry.
+              Leruo Foundation proudly announces the launch of the Women CEOs&apos; Network. This exclusive initiative is designed to bring together powerful, inspiring, and visionary women who lead successful businesses across various industries who are leading established businesses with a minimum of two years in operation and at least five permanent employees. Whether you&apos;re looking for new business insights, growth opportunities, or simply seeking inspiration from other top women in business, the Women CEOs&apos; Network offers an unmatched opportunity to connect with and learn from the best in the industry.
             </p>
             <p className="text-gray-700 mb-4">
               Membership is highly selective, based on proven leadership, industry impact, and a strong alignment with the Foundation’s mission to empower women in leadership. To maintain a space of deep engagement and high-value connection, the network will be limited to just 10 participants.

@@ -60,7 +60,7 @@ export default function YouthpreneursIncubation() {
 
             {/* Highlights */}
             <div>
-              <h4 className="text-lg font-bold text-[#48101f] mb-4">What You'll Gain:</h4>
+              <h4 className="text-lg font-bold text-[#48101f] mb-4">What You&apos;ll Gain:</h4>
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-[#f9f2f1] p-3 rounded-lg">
                   <h5 className="font-semibold text-[#48101f] mb-1">Mentorship</h5>

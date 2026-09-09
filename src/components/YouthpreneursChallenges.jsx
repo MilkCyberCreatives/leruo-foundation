@@ -136,7 +136,7 @@ export default function YouthpreneursChallenges() {
                 </div>
                 
                 <p>
-                  We're cultivating a new breed of leaders who will transform industries and drive meaningful societal progress.
+                  We&apos;re cultivating a new breed of leaders who will transform industries and drive meaningful societal progress.
                 </p>
               </div>
 

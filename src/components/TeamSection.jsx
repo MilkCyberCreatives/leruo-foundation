@@ -60,7 +60,7 @@ export default function TeamSection() {
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Foundation Team</h2>
           <p className="text-lg md:text-xl max-w-3xl mx-auto opacity-90">
-            Our experienced team drives the foundation's vision with strategic direction and operational excellence.
+            Our experienced team drives the foundation&apos;s vision with strategic direction and operational excellence.
           </p>
         </motion.div>
       </div>
@@ -144,7 +144,7 @@ export default function TeamSection() {
                 <div className="absolute left-0 top-0 h-full w-1 bg-leruo rounded-full"></div>
                 <p className="text-gray-700 text-lg leading-relaxed">
                   <span className="block text-2xl font-light italic mb-4">
-                    "Where there is no vision, the people perish."
+                    &quot;Where there is no vision, the people perish.&quot;
                   </span>
                   <span className="block text-sm text-gray-500 mb-2">- Proverbs 29:18</span>
                   Our vision is built on the foundation of empowerment through education, financial literacy, and sustainable community development.
