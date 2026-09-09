@@ -90,6 +90,34 @@ function assertMetadata(path, body, { noindex = false } = {}) {
   if (!body.includes(`name="robots" content="${expectedRobots}`)) {
     throw new Error(`${path} has unexpected robots metadata`);
   }
+
+  if (/<meta[^>]+name=["']keywords["']/i.test(body)) {
+    throw new Error(`${path} should not emit the obsolete meta keywords tag`);
+  }
+  if (/<meta[^>]+name=["'](?:geo\.|ICBM)/i.test(body)) {
+    throw new Error(`${path} should not emit obsolete geographic meta tags`);
+  }
+  if (/hreflang=/i.test(body)) {
+    throw new Error(`${path} should not emit hreflang without a genuine alternate locale URL`);
+  }
+}
+
+function assertSecurityHeaders(response) {
+  const required = {
+    'content-security-policy': "frame-ancestors 'self'",
+    'x-frame-options': 'SAMEORIGIN',
+    'x-content-type-options': 'nosniff',
+    'referrer-policy': 'strict-origin-when-cross-origin',
+    'permissions-policy': 'camera=(), microphone=(), geolocation=()',
+    'strict-transport-security': 'max-age=31536000',
+  };
+
+  for (const [name, expected] of Object.entries(required)) {
+    const actual = response.headers.get(name);
+    if (actual !== expected) {
+      throw new Error(`Security header ${name} expected "${expected}" but received "${actual}"`);
+    }
+  }
 }
 
 const indexableRoutes = [
@@ -126,6 +154,9 @@ try {
     assertMetadata(route, body, { noindex: true });
     pageBodies.set(route, body);
   }
+
+  const { response: homeResponse } = await fetchRoute('/');
+  assertSecurityHeaders(homeResponse);
 
   const home = pageBodies.get('/');
   for (const text of ['Empowering the Next Generation', 'Featured Events', 'Leruo Foundation']) {
@@ -206,7 +237,7 @@ try {
   }
 
   console.log(
-    `E2E smoke passed: ${pageBodies.size} public pages, SEO metadata, redirect, discovery files, icon and ${internalLinks.size} internal links are healthy.`,
+    `E2E smoke passed: ${pageBodies.size} public pages, SEO metadata, security headers, redirect, discovery files, icon and ${internalLinks.size} internal links are healthy.`,
   );
 } finally {
   server.kill('SIGTERM');
